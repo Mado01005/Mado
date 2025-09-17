@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANIA THE ONE AND ONLY<3</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Core Styles */
+        :root {
+            --deep-red: #d32f2f;
+            --soft-pink: #f8bbd0;
+            --text-dark: #441c29;
+            --gradient: linear-gradient(45deg, #e73c7e, #ee7752);
+        }
+
+        body {
+            overflow-x: hidden;
+            overflow-y: auto; 
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%);
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            padding: 4rem 2rem;
+        }
+
+        /* --- Custom Scrollbar --- */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #fff0f5; }
+        ::-webkit-scrollbar-thumb { background: var(--soft-pink); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--deep-red); }
+
+        /* --- Scroll Progress Bar --- */
+        .progress-bar {
+            position: fixed; top: 0; left: 0; height: 5px; background: var(--gradient); width: 0%; z-index: 100; transition: width 0.1s linear;
+        }
+
+        /* Animated Heart Background */
+        .heart-background {
+            position: fixed; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden; z-index: -1;
+        }
+        .heart-bg {
+            position: absolute; width: 20px; height: 20px; background-color: var(--soft-pink); clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); animation: float-bg 25s infinite linear; opacity: 0.6;
+        }
+        @keyframes float-bg {
+            0% { transform: translateY(110vh) rotate(0deg); }
+            100% { transform: translateY(-10vh) rotate(720deg); }
+        }
+        
+        /* Gallery Styles */
+        .gallery-container h1 {
+            font-family: 'Dancing Script', cursive; text-align: center; font-size: 5.5rem; margin-bottom: 3rem; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 3px 3px 5px rgba(231, 60, 126, 0.1);
+        }
+        
+        .photo-entry {
+            background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); max-width: 650px; margin: 3rem auto; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); overflow: hidden; opacity: 0; transform: translateY(50px) rotate(-3deg); transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .photo-entry.visible {
+            opacity: 1; transform: translateY(0) rotate(0deg);
+        }
+        .photo-entry:hover {
+            transform: translateY(-10px) scale(1.05); box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+        }
+        .photo-entry img,
+        .photo-entry video {
+            width: 100%; height: auto; display: block;
+        }
+        .photo-entry .description {
+            padding: 2rem; font-size: 1.25rem; font-weight: 300; line-height: 1.8; color: var(--text-dark); text-align: center;
+        }
+
+        /* --- Styles for Responsive YouTube Video --- */
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio for standard videos */
+        }
+        .video-container.short {
+             /* 9:16 Aspect Ratio for vertical shorts */
+            padding-top: 177.77%;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <div class="heart-background">
+        <div class="heart-bg" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="heart-bg" style="left: 20%; animation-delay: 2.5s;"></div>
+        <div class="heart-bg" style="left: 30%; animation-delay: 5s;"></div>
+        <div class="heart-bg" style="left: 40%; animation-delay: 7.5s;"></div>
+        <div class="heart-bg" style="left: 50%; animation-delay: 10s;"></div>
+        <div class="heart-bg" style="left: 60%; animation-delay: 12.5s;"></div>
+        <div class="heart-bg" style="left: 70%; animation-delay: 15s;"></div>
+        <div class="heart-bg" style="left: 80%; animation-delay: 17.5s;"></div>
+        <div class="heart-bg" style="left: 90%; animation-delay: 20s;"></div>
+    </div>
+
+    <main class="gallery-container">
+        <h1>H&A together🫶 </h1>
+        
+        <div class="photo-entry"><img src="https://i.ibb.co/RT4cgS0M/IMG-4945.png" alt="IMG-4945"><p class="description">12/12 was a special date for me while we were talking I was surprised you posted a story saying hbd to me actually💗</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/wrr778yG/IMG-6719.jpg" alt="IMG-6719"><p class="description">2/5 First day to hangout after a longtime no see and you insisted if I want to bring any of friends but my answer was always the same I want to hang out with you and only A perfect sushi date❤️</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/Fbx5JHMb/IMG-7105.jpg" alt="IMG-7105"><p class="description">24/11 our first hangout together after you hit anas and I make it as an excuse to talk to you and here we are eating breakfast on arbyt foul together🫶</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/PzDcTTsr/IMG-7107.jpg" alt="IMG-7107"><p class="description">20/12 no need to talk your look is enough after biting my shoulder and putting your finger in ear but I got my revenge by making you my girl and asking you to start a new whole chapter together and you AGREED🤩</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/5ZRn5XS/IMG-7108.jpg" alt="IMG-7108"><p class="description">25/12 our first hangout as couples and introducing you to my friends as my biggest accomplishment😍</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/NndchfvG/IMG-7110.jpg" alt="IMG-7110"><p class="description">8/1 The best day I've ever had with you and made such great memories together with all our laughter together💗</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/d4mnGXXx/IMG-7111.jpg" alt="IMG-7111"><p class="description">13/1 was really hating my self back then when I stopped going to the gym but you always make me feel special no matter what❤️</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/xKB8hZH5/IMG-7114.jpg" alt="IMG-7114"><p class="description">23/1 After a month of being together I finally had the honor to meet Rowan, I remember first when I saw you at green plaza I didnt pay any attention to you😂 and went straight away to Rowan "Tl3 wa5dek masnad"</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/Y7KyBqxV/IMG-7117.jpg" alt="IMG-7117"><p class="description">30/1 You were always jealous of my middle finger and it was the day js before your trial and you were stressed that's why we were together💗</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/6JgGJHqF/IMG-7118.jpg" alt="IMG-7118"><p class="description">6/2 BEST DAY EVER FOR ME cuz you were literally stunning I was amazed by how gorgeous you were that day😍</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/39qBssMj/IMG-7122.jpg" alt="IMG-7122"><p class="description">20/2 After being 2 months with the best person ever😍</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/tT1VrGPS/IMG-7123.jpg" alt="IMG-7123"><p class="description">21/2 I was exhausted of my teachers exams and you were threatening to afarfsh but I was already mfarfsh cuz I was with you❤️</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/35xJbSCV/IMG-7124.jpg" alt="IMG-7124"><p class="description">21/2 This one was better showing love in photos cuz We both cant really express it well</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/whr3Cb5Q/IMG-7126.jpg" alt="IMG-7126"><p class="description">23/2 Best day we've ever had it was LITERALLY "leilt el 3omr" first time dancing together and giving you kiss, I remember your reaction you literally melting❤️🥹</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/Rpy7PHyk/IMG-7127.jpg" alt="IMG-7127"><p class="description">20/3 After our first fight and almost ruining everything but I cant lose you I remember how you looked at me at zed&co When I put the flowers and chocolate on the table it was like I missed you so much and we were also celebrating our 3 Months together💗 </p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/DHWtGpY1/IMG-7128.jpg" alt="IMG-7128"><p class="description">31/3 Our first "W2fa" together was a perfect day and driving you home by 2am was js crazy and your hugs and kisses were js perfect back then "mtnsish jilan lma s2lt l3bna 3aris w 3arosa wna oltlha lesa😂"</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/bjFrLfYB/IMG-7129.jpg" alt="IMG-7129"><p class="description">31/3 A great photo of us look how cute was your smile💗💗</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/dsr1qPvV/IMG-7131.jpg" alt="IMG-7131"><p class="description">17/4 I literally love when I compliment you and you get blushed or do this hand thing , never forget "ya madooooo"🥺🥺</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/27Mxmp3V/IMG-7135.jpg" alt="IMG-7135"><p class="description">17/7 after I finished my thanaweya 3ama I was finally be able to see you and hangout with the most person I love and never forgot this hand placement I was literally MELTING when you were taking this photo</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/nN6KVZrv/IMG-7136.jpg" alt="IMG-7136"><p class="description">29/7 The best day I've ever had and the best surprise I did for my hanouna cuz I would never let this special person to have it without me my queen had turned 18❤️, I remember when we kissed it was FULL of emotions and love❤️❤️ </p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/DHtBggpg/IMG-7139.jpg" alt="IMG-7139"><p class="description">11/9 After almost being 9 months together I had to make a surprise for you and breaking the habits like hanging js out and I spontaneously went to buy for my favourite human being flower💗🫶</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/VYp0pQ2T/IMG-7145.jpg" alt="IMG-7145"><p class="description">25/1 After you were asking me to come to you and rowan and said that it's gonna be hard but quess what I showed up cuz I'll never miss a chance to meet the love of my life always 💗</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/xqs4Z3M6/IMG-7146.jpg" alt="IMG-7146"><p class="description">6/2 Burger king the first time I've enetered this place was with my fav person , I remember mn orayb lma shofnaha w olti akni a3da 3la reglk😂</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/0RLQtmQD/IMG-7147.jpg" alt="IMG-7147"><p class="description">14/2 Our first valentine day , You arrived late that day and I was pissed but seeing you almost made me forget my name🫶</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/fdy6S05T/IMG-7151.jpg" alt="IMG-7151"><p class="description">3/4 The night js before our first mun , I said our 3shan e7na wahed f kol haga , I was so happy seeing my baby girl attending her first mun and having to debate was so happy seeing you trying new things and get out of your comfort zone🥹</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/qMvFBNTY/IMG-7152.jpg" alt="IMG-7152"><p class="description">27/5 No words needed LITERALLY , War2 el 3enab is enough✨</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/gZLd0d7d/IMG-7153.jpg" alt="IMG-7153"><p class="description">16/7 That day when I hit you with my face and it had a red hole on it but at least I gave you a headache but we gave eachother a hug bnsal7 b3d beh b3d el 3onf elly 7asl🫶🫶</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/WN0ZcDx2/IMG-7154.jpg" alt="IMG-7154"><p class="description">29/7 A special photo of us will never forget that day❤️❤️</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/DfgDTZqN/IMG-7157.jpg" alt="IMG-7157"><p class="description">31/7 Just us together admiring how beautiful and amazing person you are and never wanting to leave you EVER the pic shows it all🥹🥹</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/zTY1Pwwf/IMG-7158.jpg" alt="IMG-7158"><p class="description">11/9 After being together again and only fews days to be 9 months together💗 and it's js the begining of our chapter❤️</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/vCmFLpfS/View-recent-photos-copy.png" alt="View-recent-photos-copy"><p class="description">28/2 Our last friday date before ramadan and me diving into thanaweya 3ama ft. Rowan , Lma mskt eidk w rowan aletlna bt2rtsoni wla eh😂❤️</p></div>
+        <div class="photo-entry"><img src="https://i.ibb.co/YTfLK5Ly/View-recent-photos.png" alt="View-recent-photos"><p class="description">5/8 this special photo was amazing and our outfit was stunning I loved how always stunning you look my love❤️❤️</p></div>
+
+        <div class="photo-entry">
+            <div class="video-container short">
+                <iframe src="https://www.youtube.com/embed/7NFb4zbQOB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p class="description">CANT GET OVER THIS VIDEO AND HOW YOU LOOKED IN MY HOODIE❤️</p>
+        </div>
+
+    </main>
+    
+    <script>
+        // --- Script for scroll-in animation ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        const photoEntries = document.querySelectorAll('.photo-entry');
+        photoEntries.forEach((el) => observer.observe(el));
+
+
+        // --- Script for Scroll Progress Bar ---
+        const progressBar = document.getElementById('progressBar');
+
+        window.addEventListener('scroll', () => {
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (window.pageYOffset / totalHeight) * 100;
+            progressBar.style.width = `${progress}%`;
+        });
+    </script>
+
+</body>
+</html>
